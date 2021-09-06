@@ -1,0 +1,40 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "vercel deploy",
+    "link-contracts": "cd lib && ln -s ../../build/contracts contracts"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.15",
+    "@chakra-ui/react": "^1.6.7",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@ethersproject/experimental": "^5.4.0",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "apollo-server-micro": "^3.3.0",
+    "ethers": "^5.4.6",
+    "form-data": "^4.0.0",
+    "framer-motion": "^4",
+    "graphql": "^15.5.2",
+    "isomorphic-unfetch": "^3.1.0",
+    "lodash.get": "^4.4.2",
+    "micro": "^9.3.4",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.14.2",
+    "react-icons": "^4.2.0",
+    "swr": "^1.0.0",
+    "web3": "^1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Marketplace
+    network: ropsten
+    source:
+      address: "0x62f450BA618b8277A91916d81C49e1b7Df10D013"
+      abi: Marketplace
+      startBlock: 11013704
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - MarketItemEvent
+      abis:
+        - name: Marketplace
+          file: ./client/contracts/Marketplace.json
+      eventHandlers:
+        - event: MarketItemEvent(indexed uint256,indexed address,indexed uint256,string,address,address,uint256,bool,uint8)
+          handler: handleMarketItemEvent
+      file: ./mapping/index.ts
